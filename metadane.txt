@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Zad1- informacje geolokalizacyjne
+#exiftool '-*gps*' $1
+
+#Zad2- ukryta wiadomosc
+#exiftool '-about' $1
+#exiftool '-imagedescription' $1
+
+#Zad3- pliki skladowe, binwalk
+#binwalk $1
+#binwalk -D '.*' $1
+
+#Zad4- usuwanie metadanych z pliku
+#exiftool -all= $1
+#exiftool $1
+
+#Zad5- wysokosc za pomoca string
+#strings $1 | grep 'Altitude'
+
+#Zad6- metadane poza exiftool
+#file $1
+jpeginfo $1
+#strings $1
+
